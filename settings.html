@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - TechCorp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="app-page">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-small">
+                    <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="sidebarGradient7" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4dabf7;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#0066cc;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <rect x="25" y="30" width="50" height="40" fill="url(#sidebarGradient7)" rx="5"/>
+                        <circle cx="35" cy="40" r="3" fill="white"/>
+                        <circle cx="50" cy="35" r="3" fill="white"/>
+                        <circle cx="65" cy="40" r="3" fill="white"/>
+                        <circle cx="50" cy="55" r="3" fill="white"/>
+                        <line x1="35" y1="40" x2="50" y2="35" stroke="white" stroke-width="1"/>
+                        <line x1="50" y1="35" x2="65" y2="40" stroke="white" stroke-width="1"/>
+                        <line x1="35" y1="40" x2="50" y2="55" stroke="white" stroke-width="1"/>
+                        <line x1="65" y1="40" x2="50" y2="55" stroke="white" stroke-width="1"/>
+                    </svg>
+                </div>
+                <h3>TechCorp</h3>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="dashboard.html" class="nav-item" data-page="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-label">Dashboard</span>
+                </a>
+                <a href="attendance.html" class="nav-item" data-page="attendance">
+                    <span class="nav-icon">✅</span>
+                    <span class="nav-label">Attendance</span>
+                </a>
+                <a href="timesheet.html" class="nav-item" data-page="timesheet">
+                    <span class="nav-icon">⏱️</span>
+                    <span class="nav-label">TimeSheet</span>
+                </a>
+                <a href="leave.html" class="nav-item" data-page="leave">
+                    <span class="nav-icon">📋</span>
+                    <span class="nav-label">Leave</span>
+                </a>
+                <a href="calendar.html" class="nav-item" data-page="calendar">
+                    <span class="nav-icon">📅</span>
+                    <span class="nav-label">Calendar</span>
+                </a>
+                <a href="documents.html" class="nav-item" data-page="documents">
+                    <span class="nav-icon">📄</span>
+                    <span class="nav-label">Documents</span>
+                </a>
+                <a href="settings.html" class="nav-item active" data-page="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-label">Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="btn-logout" onclick="logout()">Logout</button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="header-left">
+                    <h1>Settings</h1>
+                </div>
+            </header>
+
+            <div class="content-area">
+                <div class="settings-container">
+                    <div class="settings-nav">
+                        <button class="settings-tab active" onclick="switchTab('profile')">Profile</button>
+                        <button class="settings-tab" onclick="switchTab('account')">Account</button>
+                        <button class="settings-tab" onclick="switchTab('notifications')">Notifications</button>
+                        <button class="settings-tab" onclick="switchTab('security')">Security</button>
+                        <button class="settings-tab" onclick="switchTab('advanced')">Advanced</button>
+                    </div>
+
+                    <div class="settings-content">
+                        <!-- Profile Settings -->
+                        <div id="profile-tab" class="settings-section active">
+                            <h2>Profile Information</h2>
+                            <div class="card">
+                                <div class="form-group">
+                                    <div class="avatar-upload">
+                                        <div class="avatar-preview">JD</div>
+                                        <button class="btn btn-secondary">Change Avatar</button>
+                                    </div>
+                                </div>
+
+                                <form onsubmit="saveSettings(event)">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" id="firstName" value="John" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" id="lastName" value="Doe" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" value="john@techcorp.com" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" value="+1 (555) 123-4567" placeholder="Optional">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="bio">Bio</label>
+                                        <textarea id="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="department">Department</label>
+                                        <select id="department">
+                                            <option>Engineering</option>
+                                            <option>Product</option>
+                                            <option>Design</option>
+                                            <option>Sales</option>
+                                            <option>Marketing</option>
+                                            <option>HR</option>
+                                        </select>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Account Settings -->
+                        <div id="account-tab" class="settings-section">
+                            <h2>Account Settings</h2>
+                            <div class="card">
+                                <h3>Account Type</h3>
+                                <p>Current plan: <strong>Professional</strong></p>
+                                <button class="btn btn-secondary">Upgrade to Premium</button>
+
+                                <hr>
+
+                                <h3>Language & Region</h3>
+                                <div class="form-group">
+                                    <label for="language">Language</label>
+                                    <select id="language">
+                                        <option>English (US)</option>
+                                        <option>English (UK)</option>
+                                        <option>Spanish</option>
+                                        <option>French</option>
+                                        <option>German</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="timezone">Timezone</label>
+                                    <select id="timezone">
+                                        <option>EST (UTC-5)</option>
+                                        <option>CST (UTC-6)</option>
+                                        <option>MST (UTC-7)</option>
+                                        <option>PST (UTC-8)</option>
+                                    </select>
+                                </div>
+
+                                <button class="btn btn-primary" onclick="saveSettings()">Save Changes</button>
+                            </div>
+                        </div>
+
+                        <!-- Notifications Settings -->
+                        <div id="notifications-tab" class="settings-section">
+                            <h2>Notification Preferences</h2>
+                            <div class="card">
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="emailNotif" checked>
+                                    <label for="emailNotif">Email Notifications</label>
+                                </div>
+
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="pushNotif" checked>
+                                    <label for="pushNotif">Push Notifications</label>
+                                </div>
+
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="smsNotif">
+                                    <label for="smsNotif">SMS Notifications</label>
+                                </div>
+
+                                <hr>
+
+                                <h3>Notification Types</h3>
+
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="docNotif" checked>
+                                    <label for="docNotif">Document Updates</label>
+                                </div>
+
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="meetingNotif" checked>
+                                    <label for="meetingNotif">Meeting Reminders</label>
+                                </div>
+
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="commentNotif" checked>
+                                    <label for="commentNotif">Comments & Mentions</label>
+                                </div>
+
+                                <div class="form-group checkbox">
+                                    <input type="checkbox" id="teamNotif">
+                                    <label for="teamNotif">Team Updates</label>
+                                </div>
+
+                                <button class="btn btn-primary" onclick="saveSettings()">Save Preferences</button>
+                            </div>
+                        </div>
+
+                        <!-- Security Settings -->
+                        <div id="security-tab" class="settings-section">
+                            <h2>Security & Privacy</h2>
+                            <div class="card">
+                                <h3>Password</h3>
+                                <button class="btn btn-secondary" onclick="changePassword()">Change Password</button>
+
+                                <hr>
+
+                                <h3>Two-Factor Authentication</h3>
+                                <p>Status: <strong style="color: #ff6b6b;">Not Enabled</strong></p>
+                                <p>Enhance your account security with two-factor authentication.</p>
+                                <button class="btn btn-primary">Enable 2FA</button>
+
+                                <hr>
+
+                                <h3>Active Sessions</h3>
+                                <div class="session-item">
+                                    <div class="session-info">
+                                        <p class="session-device">💻 Chrome on Windows</p>
+                                        <p class="session-location">New York, US • Mar 19, 2026</p>
+                                    </div>
+                                    <p class="session-status" style="color: #51cf66;">Current</p>
+                                </div>
+                                <div class="session-item">
+                                    <div class="session-info">
+                                        <p class="session-device">📱 Safari on iPhone</p>
+                                        <p class="session-location">New York, US • Mar 18, 2026</p>
+                                    </div>
+                                    <button class="btn btn-sm btn-danger">Sign Out</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Advanced Settings -->
+                        <div id="advanced-tab" class="settings-section">
+                            <h2>Advanced Settings</h2>
+                            <div class="card">
+                                <h3>Data & Privacy</h3>
+                                <button class="btn btn-secondary" onclick="downloadData()">Download My Data</button>
+                                <p>Get a copy of all your data in a portable format.</p>
+
+                                <hr>
+
+                                <h3>Danger Zone</h3>
+                                <div style="background: #ffe0e0; padding: 15px; border-radius: 4px; margin-bottom: 20px;">
+                                    <h4>Delete Account</h4>
+                                    <p>Once you delete your account, there is no going back. Please be certain.</p>
+                                    <button class="btn btn-danger" onclick="deleteAccount()">Delete Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>

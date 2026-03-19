@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechCorp - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo-container">
+                <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#0052a3;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="logoShadow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+                        </filter>
+                    </defs>
+                    <!-- Outer circle with gradient -->
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#logoGradient)" stroke-width="3" filter="url(#logoShadow)"/>
+                    <!-- Main tech icon background -->
+                    <rect x="25" y="30" width="50" height="40" fill="url(#logoGradient)" rx="5" filter="url(#logoShadow)"/>
+                    <!-- Network dots -->
+                    <circle cx="35" cy="40" r="3.5" fill="white"/>
+                    <circle cx="50" cy="35" r="3.5" fill="white"/>
+                    <circle cx="65" cy="40" r="3.5" fill="white"/>
+                    <circle cx="50" cy="55" r="3.5" fill="white"/>
+                    <!-- Connection lines -->
+                    <line x1="35" y1="40" x2="50" y2="35" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="50" y1="35" x2="65" y2="40" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="35" y1="40" x2="50" y2="55" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="65" y1="40" x2="50" y2="55" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                    <!-- Center dot -->
+                    <circle cx="50" cy="45" r="2" fill="white"/>
+                </svg>
+                <h1 class="company-name">TechCorp</h1>
+            </div>
+            
+            <h2>Welcome</h2>
+            <p class="subtitle">Sign in to your account</p>
+
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            </form>
+
+            <div class="login-footer">
+                <p>Don't have an account? <a href="#signup">Sign up</a></p>
+                <p><a href="#forgot">Forgot password?</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

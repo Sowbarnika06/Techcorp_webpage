@@ -236,5 +236,7 @@ Free to use and modify for personal and commercial projects.
 
 For issues or questions, review the code comments in each JavaScript file or test in the browser console.
 
+---
+
 **Version:** 1.0.0  
 **Last Updated:** March 19, 2026
