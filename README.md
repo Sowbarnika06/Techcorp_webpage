@@ -1,259 +1,240 @@
-# Techcorp_webpage
-Here's comprehensive README content for your TechCorp Dashboard GitHub repository:
+# TechCorp Dashboard Application
 
-```markdown
-# TechCorp Dashboard - Employee Management System
+A professional, fully functional dashboard application built with HTML, CSS, and JavaScript. Features a modern UI with multiple pages, responsive design, and complete user management.
 
-A modern, intuitive employee management dashboard built with vanilla HTML5, CSS3, and JavaScript. This web application provides comprehensive tools for attendance tracking, timesheet management, leave applications, calendar scheduling, and document management.
-
-## 🌟 Features
-
-### Core Functionality
-- **📊 Dashboard** - Overview with statistics cards and activity timeline
-- **✅ Attendance Tracking** - Daily and monthly attendance logs with check-in/check-out functionality
-- **⏱️ TimeSheet Management** - Task logging with automatic hour calculation and date-based task creation
-- **📋 Leave Management** - Leave balance tracking and application system with approval status
-- **📅 Calendar & Schedule** - Interactive month/week/day views with upcoming events list
-- **📄 Document Management** - File management with search, filter, and download capabilities
-- **⚙️ Settings** - User profile, account, notifications, security, and advanced settings
-
-### Interactive Features
-- **Date-Click Modal** - Click any date to create tasks with start time, end time, project name, and category
-- **Cross-Page Navigation** - Seamless navigation between Calendar and TimeSheet with auto-selected dates
-- **Real-Time Validation** - Form validation on all input pages
-- **Responsive Design** - Mobile, tablet, and desktop optimized layouts
-- **Modern UI/UX** - Gradient backgrounds, smooth animations, and professional styling
-
-## 📋 Tech Stack
-
-- **Frontend**: HTML5, CSS3 (Custom properties, Grid/Flexbox)
-- **Scripting**: Vanilla JavaScript (ES6+)
-- **Storage**: localStorage & sessionStorage for client-side data persistence
-- **Design Pattern**: Client-side data management with real-time UI updates
-- **Browser APIs**: Date object, DOM manipulation, Event listeners
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- No dependencies or build tools required
-
-### Installation
-
-1. **Clone the repository**
-```bash
-git clone https://github.com/yourusername/techcorp-dashboard.git
-cd techcorp-dashboard
-```
-
-2. **Open in browser**
-```bash
-# Option 1: Direct file open
-Open `index.html` in your preferred browser
-
-# Option 2: Use a local server (recommended)
-python -m http.server 8000
-# or
-npx http-server
-```
-
-3. **Access the application**
-- Navigate to `http://localhost:8000` (or the server address)
-
-## 📁 Project Structure
+## Project Structure
 
 ```
-techcorp-dashboard/
-├── index.html              # Login page
-├── dashboard.html          # Main dashboard page
-├── attendance.html         # Attendance tracking page
-├── timesheet.html          # TimeSheet and task management page
-├── leave.html              # Leave management page
-├── calendar.html           # Calendar and scheduling page
-├── documents.html          # Document management page
-├── settings.html           # User settings page
-├── styles.css              # Global stylesheet with responsive design
-├── app.js                  # Global utilities and common functions
-├── calendar.js             # Calendar logic and date interactions
-├── timesheet.js            # TimeSheet form handling and task management
-├── attendance.js           # Attendance tracking logic
-├── leave.js                # Leave management logic
-├── documents.js            # Document management logic
-└── README.md               # This file
+techcorp/
+├── index.html           # Login Page
+├── dashboard.html       # Main Dashboard with Statistics
+├── calendar.html        # Calendar & Scheduling
+├── documents.html       # Documents Management with Table
+├── settings.html        # User Settings & Preferences
+├── styles.css          # Global Styles
+├── app.js              # Main Application Logic
+├── calendar.js         # Calendar Functionality
+├── documents.js        # Documents Management Logic
+├── settings.js         # Settings Page Logic
+└── README.md           # This file
 ```
 
-## 🎯 Key Pages & Features
+## Features
 
-### 1. Login Page (index.html)
-- User authentication simulation
-- Session management
-- Demo credentials validation
+### 1. **Login Page**
+- Email and password authentication
+- Remember me checkbox
+- Form validation
+- Responsive login layout
+- Clean, modern design with gradient background
 
-### 2. Dashboard (dashboard.html)
-- Statistics cards (Total Employees, Present Today, etc.)
-- Activity timeline with recent events
-- Quick access navigation
+### 2. **Dashboard**
+- Statistics cards showing key metrics
+- Recent activity table
+- User information display
+- Quick navigation to other pages
+- Responsive grid layout
 
-### 3. Attendance (attendance.html)
-- Daily attendance log with check-in/check-out buttons
-- Monthly attendance summary
-- Presence percentage tracking
+### 3. **Calendar & Schedule**
+- Monthly calendar view with navigation
+- Mini calendar for date selection
+- Upcoming events list
+- Week and day view options
+- Interactive event management
+- Event filtering and search
 
-### 4. TimeSheet (timesheet.html)
-- Daily and weekly task views
-- **Add Tasks Modal**: Click date input to open task creation form
-- Task details: Project name, start time, end time, category, status, description
-- Automatic hour calculation
-- Task list display and management
+### 4. **Documents & Files**
+- Comprehensive document table
+- Search functionality
+- Filter by document type (PDF, Word, Excel, PowerPoint)
+- Sort by name, date, or size
+- Download, share, and delete operations
+- Pagination support
+- Batch operations (select multiple)
 
-### 5. Leave Management (leave.html)
-- Leave balance tracking with breakdown by type
-- Leave application form with modal interface
-- Status tracking (Pending, Approved, Rejected)
-- Leave history
+### 5. **Settings**
+- **Profile Tab**: Update personal information
+- **Account Tab**: Manage subscription and preferences
+- **Notifications Tab**: Control notification settings
+- **Security Tab**: Password management and 2FA options
+- **Advanced Tab**: Data export and account deletion
+- Settings persistence with localStorage
 
-### 6. Calendar (calendar.html)
-- **Month View** - Full month overview with color-coded events
-- **Week View** - Hourly schedule with event slots
-- Date selection with automatic navigation to TimeSheet
-- Upcoming events sidebar
-- Mini calendar for quick navigation
+### 6. **Sidebar Navigation**
+- Easy page navigation
+- Active page highlighting
+- Company branding with logo
+- User profile access
+- Logout functionality
 
-### 7. Documents (documents.html)
-- File listing with metadata
-- Search, filter, and sort functionality
-- Download and delete capabilities
-- File type indicators
+## Getting Started
 
-### 8. Settings (settings.html)
-- **Profile Tab** - User information and avatar
-- **Account Tab** - Login credentials and account settings
-- **Notifications Tab** - Notification preferences
-- **Security Tab** - Password and two-factor authentication
-- **Advanced Tab** - System preferences and export options
+### 1. Open in Browser
+Simply open `index.html` in your web browser to start the application.
 
-## 💾 Data Persistence
+### 2. Login
+- Use any email and password combination (demo app doesn't validate credentials)
+- Check "Remember me" to stay logged in
+- Credentials are stored in browser localStorage
 
-The application uses browser storage for data management:
-- **localStorage** - Persistent user data and settings
-- **sessionStorage** - Temporary data for cross-page communication (e.g., selected dates)
+### 3. Navigate
+Use the sidebar menu to navigate between:
+- Dashboard
+- Calendar
+- Documents
+- Settings
 
-Data structure examples:
+## Key Features Explained
+
+### Session Management
+- User sessions are stored in localStorage
+- Automatic redirection to login if not authenticated
+- Logout clears session and returns to login page
+
+### Responsive Design
+- Works on desktop, tablet, and mobile devices
+- Responsive sidebar (collapses on smaller screens)
+- Mobile-optimized tables and forms
+- Touch-friendly interface
+
+### Local Storage
+- Settings are persisted in browser storage
+- No server required for basic functionality
+- Data survives page refreshes
+
+### Notifications
+- Toast notifications for user feedback
+- Automatic dismissal after 3 seconds
+- Different types: success, error, info
+
+## Browser Compatibility
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Customization
+
+### Colors
+Edit the CSS variables in `styles.css`:
+```css
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #6c757d;
+    --success-color: #51cf66;
+    /* ... more colors ... */
+}
+```
+
+### Company Name & Logo
+1. Edit company name in HTML files
+2. Modify SVG logo in sidebar header
+3. Update logo colors in CSS
+
+### Add New Pages
+1. Create new HTML file following the existing template
+2. Add navigation link in sidebar
+3. Create corresponding JavaScript file if needed
+
+## Form Handling
+
+### Adding New Form Fields
+All forms use standard HTML5 validation. To add a field:
+
+```html
+<div class="form-group">
+    <label for="fieldName">Label</label>
+    <input type="text" id="fieldName" name="fieldName" required>
+</div>
+```
+
+## Extending Functionality
+
+### Add Database Backend
+Replace localStorage calls with API endpoints:
+
 ```javascript
-// Timesheet entries
-{
-    id: unique_id,
-    task: "Task description",
-    project: "Project name",
-    startTime: "09:00",
-    endTime: "17:00",
-    hours: 8,
-    date: "2026-03-19",
-    category: "Development",
-    status: "Completed",
-    description: "Task details"
-}
+// Current (localStorage)
+localStorage.setItem('key', value);
 
-// Leave records
-{
-    leaveType: "Sick Leave",
-    startDate: "2026-03-20",
-    endDate: "2026-03-21",
-    reason: "Personal",
-    status: "Pending"
-}
+// Backend (example)
+fetch('/api/settings', { method: 'POST', body: JSON.stringify(data) })
 ```
 
-## 🎨 Design Features
+### Add Authentication
+Replace demo login with real authentication:
 
-- **Modern Gradient Design** - Blue gradient color scheme throughout
-- **Responsive Layout** - Adapts to all screen sizes
-- **Custom Scrollbars** - Styled with gradient colors
-- **Smooth Animations** - Cubic-bezier transitions for interactive elements
-- **Professional Styling** - Box shadows, border-radius, and spacing
-- **Accessibility** - Semantic HTML and keyboard navigation support
+```javascript
+// Current (demo)
+localStorage.setItem('techcorp_user', JSON.stringify(user));
 
-## 🔌 API Integration Ready
+// Real auth (example)
+const response = await fetch('/api/login', { ... });
+const token = response.data.token;
+```
 
-The application is structured to easily integrate with:
-- RESTful APIs for user authentication
-- Backend databases for data persistence
-- Cloud file storage services
-- Email notification services
+## Troubleshooting
 
-## 📱 Browser Compatibility
+### Not Logged In After Refresh
+- Check if browser localStorage is enabled
+- Clear browser cache and cookies
+- Try in private/incognito mode
 
-- ✅ Chrome (Latest)
-- ✅ Firefox (Latest)
-- ✅ Safari (Latest)
-- ✅ Edge (Latest)
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
+### Styles Not Loading
+- Ensure `styles.css` is in the same directory as HTML files
+- Check browser console for errors
+- Verify file paths are correct
 
-## 📊 File Statistics
+### JavaScript Errors
+- Open browser console (F12) to view errors
+- Check that all .js files are in the same directory
+- Verify script tags reference correct file names
 
-- **Total Pages**: 8 HTML files
-- **Stylesheet Size**: ~2000+ CSS lines with responsive design
-- **JavaScript Code**: 1000+ lines across multiple modules
-- **Zero Dependencies**: Fully vanilla implementation
+## File Details
 
-## 🔐 Authentication
+### HTML Files
+- Use semantic HTML5 structure
+- Accessible form controls with labels
+- Responsive meta viewport tag included
+- Proper document structure
 
-Currently features a demo authentication system. For production use, implement:
-- JWT token-based authentication
-- Secure password hashing
-- Two-factor authentication
-- Session management
+### CSS File
+- Mobile-first responsive design
+- CSS Grid and Flexbox layouts
+- CSS custom properties (variables)
+- Multiple utility classes
 
-## 🚀 Future Enhancements
+### JavaScript Files
+- Modular functions
+- localStorage for data persistence
+- Event listeners for interactivity
+- Form validation
 
-- [ ] Backend API integration
-- [ ] Real-time data synchronization
-- [ ] Multi-user support with role-based access
-- [ ] Recurring tasks and events
-- [ ] PDF/Excel export functionality
-- [ ] Email notifications
-- [ ] Task comments and collaboration
-- [ ] Advanced reporting and analytics
-- [ ] Mobile app version
-- [ ] Dark mode theme
+## Performance
 
-## 🤝 Contributing
+- Optimized CSS with minimal repaints
+- Efficient DOM updates
+- Minimal external dependencies
+- Fast load times (no external libraries)
 
-Contributions are welcome! Please follow these steps:
+## Security Notes
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+**This is a demo application. For production use:**
+- Validate all inputs on server side
+- Use HTTPS for all connections
+- Implement proper authentication
+- Hash and salt passwords
+- Use secure session management
+- Add CSRF protection
 
-## 📝 License
+## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Free to use and modify for personal and commercial projects.
 
-## 💡 Usage Tips
+## Support
 
-### Adding a New Task
-1. Navigate to TimeSheet page
-2. Click on the date input field
-3. Modal opens with task creation form
-4. Fill in task details (Project, Start Time, End Time, etc.)
-5. Click "Add Task" to save
+For issues or questions, review the code comments in each JavaScript file or test in the browser console.
 
-### Applying for Leave
-1. Go to Leave Management page
-2. Click "Apply for Leave" button
-3. Select leave type, dates, and reason
-4. Submit application
-5. Track status in the leave history
-
-### Switching Calendar Views
-- Click "Month" for full month overview
-- Click "Week" for hourly schedule
-- Click "Day" for detailed day view
-
-### Creating Events from Calendar
-1. Click any date in the calendar
-2. Click the "New Event" button in the top-right
-3. Fill in event details
-4. Save event
+**Version:** 1.0.0  
+**Last Updated:** March 19, 2026
